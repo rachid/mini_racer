@@ -1,3 +1,45 @@
+- Unreleased
+  - FIX: on downgrade mkmf was picking the wrong version of libv8, this fix will correct future issues
+
+- 29-06-2020
+
+- 0.2.15
+
+  - FEATURE: basic wasm support via pump_message_loop
+
+- 15-05-2020
+
+- 0.2.14
+
+  - FIX: ensure_gc_after_idle should take in milliseconds like the rest of the APIs not seconds
+  - FEATURE: strict params on MiniRacer::Context.new
+
+- 15-05-2020
+
+- 0.2.13
+
+   - FIX: edge case around ensure_gc_after_idle possibly firing when context is not idle
+
+- 15-05-2020
+
+- 0.2.12
+
+  - FEATURE: isolate.low_memory_notification which can force a full GC
+  - FEATURE: MiniRacer::Context.new(ensure_gc_after_idle: 2) - to force full GC 2 seconds after context is idle, this allows you to conserve memory on isolates
+
+- 14-05-2020
+
+- 0.2.11
+
+  - FIX: dumping heap snapshots was not flushing the file leading to corrupt snapshots
+  - FIX: a use-after-free shutdown crash
+
+- 0.2.10
+
+- 22-04-2020
+
+  - FEATURE: memory softlimit support for nogvl_context_call
+
 - 0.2.9
 
 - 09-01-2020

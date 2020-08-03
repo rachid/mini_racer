@@ -1,6 +1,6 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib) 
 require 'mini_racer/version'
 
 Gem::Specification.new do |spec|
@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "rake-compiler"
 
-  spec.add_dependency 'libv8', '>= 6.9.411'
+  spec.add_dependency 'libv8', MiniRacer::LIBV8_VERSION
   spec.require_paths = ["lib", "ext"]
 
   spec.extensions = ["ext/mini_racer_extension/extconf.rb"]
